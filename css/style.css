@@ -1,0 +1,40 @@
+@import url(./fonts.css);
+
+:root {
+    --black: #000;
+    --white: #fff;
+    --linkHover: #ED8E00;
+    --btn: #F18128;
+    --btnHover: #040D1F;
+    --title: #F18128;
+    --font1: 'Comfortaa';
+    --font2: 'Montserrat';
+    --font3: 'Roboto';
+    --bodyBg: #040D1F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: var(--font1);
+    background: var(--bodyBg);
+}
