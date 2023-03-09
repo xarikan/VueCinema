@@ -14,6 +14,35 @@
     .container {
         max-width: 540px;
     }
+    
+    .header__nav {
+        padding: 29px 0;
+        position: relative;
+    }
+    
+    .header__list {
+        flex-direction: column;
+        position: absolute;
+        background: var(--black);
+        width: 200px;
+        padding: 20px;
+        top: 100%;
+        left: -200px;
+        transition: 500ms;
+    }
+    
+    .header__link {
+        text-align: center;
+    }
+    
+    .header__btn {
+        display: flex;
+    }
+    
+    .header__btn:focus + .header__list {
+        left: 0;
+    }
+    
 }
 
 @media(max-width: 576px) {
