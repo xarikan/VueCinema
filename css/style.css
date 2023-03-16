@@ -39,6 +39,29 @@ body {
     background: var(--bodyBg);
 }
 
+.title {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+    text-transform: capitalize;
+    color: var(--title);
+    padding-bottom: 12px;
+    position: relative;
+    display: inline-block;
+}
+
+.title::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    background: var(--title);
+    position: absolute;
+    border-radius: 23px 23px 0 0;
+    transition: 500ms;
+    bottom: 0;
+    left: 0;
+}
+
 .btn {
     max-width: 166px;
     width: 100%;
@@ -223,4 +246,107 @@ body {
     margin-bottom: 50px;
     max-width: 570px;
     width: 100%;
+}
+
+.films {
+    padding: 60px 0 78px;
+}
+
+.films:hover .title::after {
+    width: 100%;
+}
+
+.films__title {
+    margin-bottom: 55px;
+}
+
+.films__item {
+    max-width: 255px;
+    width: 100%;
+    min-height: 367px;
+    padding: 54px 15px 18px;
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.films__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    transition: 500ms;
+}
+
+.films__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(241, 129, 40, 0.35) 0%, rgba(0, 0, 0, 0.71) 51.04%, rgba(7, 15, 25, 0.8) 100%);
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+.films__icon {
+    margin-bottom: 19px;
+    transition: 500ms;
+}
+
+.films__cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.films__time {
+    width: 100px;
+    background: rgba(7, 15, 25, 0.2);
+    border: 1px solid var(--white);
+    border-radius: 9px;
+    padding: 7px;
+    text-align: center;
+    font-family: var(--font2);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 10px;
+    color: var(--white);
+    margin-bottom: 31px;
+    transition: 500ms;
+}
+
+.films__item-title {
+    text-transform: capitalize;
+    font-family: var(--font2);
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    text-align: center;
+    color: var(--white);
+    margin-bottom: 13px;
+}
+
+.films__desc {
+    font-family: var(--font3);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--white);
+}
+
+.films__item:hover .films__img {
+    transform: scale(1.2);
+}
+
+.films__item:hover .films__time {
+    transform: scale(0);
+}
+
+.films__item:hover .films__icon {
+    transform: scale(1.8) translateY(10px) rotateX(180deg);
 }
