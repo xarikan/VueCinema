@@ -18,6 +18,14 @@
     .container {
         max-width: 720px;
     }
+    
+    .cartoons .container {
+        align-items: center;
+    }
+    
+    .cartoons__desc {
+        text-align: center;
+    }
 }
 
 @media(max-width: 768px) {
@@ -112,5 +120,9 @@
     .banner__title {
         font-size: 29px;
         line-height: 40px;
+    }
+    
+    .cartoons__logo, .cartoons__desc{
+        margin-bottom: 25px;
     }
 }
