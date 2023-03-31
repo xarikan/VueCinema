@@ -125,6 +125,14 @@
       align-items: center;
     }
 
+    .footer .container{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer__desc{
+        margin-bottom: 10px;
+    }
 
 }
 
